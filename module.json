@@ -1,6 +1,6 @@
 {
   "name": "adafruit-ssd1306",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Port of SSD1306 library from Adafruit.",
   "keywords": [],
   "author": "Adafruit, Chih-Wei Fang",
