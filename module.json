@@ -1,0 +1,12 @@
+{
+  "name": "adafruit-ssd1306",
+  "version": "0.0.1",
+  "description": "Port of SSD1306 library from Adafruit.",
+  "keywords": [],
+  "author": "Adafruit, Chih-Wei Fang",
+  "license": "BSD",
+  "dependencies": {
+    "mbed-drivers": "^1.5.0",
+    "mbed-trace": "^1.1.3"
+  }
+}
