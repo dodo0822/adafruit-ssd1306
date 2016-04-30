@@ -21,7 +21,7 @@ void app_start(int, char**) {
 	//oled.clearDisplay();
 	oled.fillRect(0, 0, 128, 64, BLACK);
 	//oled.drawChar(0, 0, 'a', WHITE, BLACK, 1);
-	oled.printf("hello");
+	oled.printfPos(10, 10, "hello %s", "world");
 	oled.display();
 	
 	minar::Scheduler::postCallback(do_nothing).period(minar::milliseconds(1000));

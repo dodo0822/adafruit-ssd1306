@@ -44,6 +44,7 @@ class Adafruit_GFX {
 	
 	// the printf function
 	void printf( const char * format, ...);
+	void printfPos(int16_t x, int16_t y, const char * format, ...);
 	void print( const char * string) ;
 
   // these are 'generic' drawing functions, so we can share them!

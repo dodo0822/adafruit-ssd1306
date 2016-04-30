@@ -73,6 +73,25 @@ void Adafruit_GFX::print( const char * string)
 
 }
 
+void Adafruit_GFX::printfPos(int16_t x, int16_t y, const char * format, ...) 
+{
+
+  char buffer[64];
+	char * p = buffer;
+	int n;
+  va_list args;
+  va_start (args, format);
+  vsnprintf (buffer, sizeof(buffer)-1, format, args);
+	n = strlen(buffer);
+	uint8_t i = 0;
+		
+	while (*p != 0 && n-->0)
+	{
+		drawChar (x + (i++)*textsize*6, y, (uint8_t) *p++, 1, 0, textsize);
+	}
+
+  va_end (args);
+}
 
 // draw a circle outline
 void Adafruit_GFX::drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) 
@@ -498,6 +517,7 @@ size_t Adafruit_GFX::write(uint8_t c)
 // draw a character
 void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c, uint16_t color, uint16_t bg, uint8_t size) 
 {
+  if(c == '\r' || c == '\n') return;
 
   if((x >= _width)            || // Clip right
      (y >= _height)           || // Clip bottom
