@@ -20,12 +20,9 @@ All text above, and the splash screen below must be included in any redistributi
  *  Modified by Neal Horman 7/14/2012 for use in mbed
  *  Modified by Chih-Wei Fang 4/29/2016 for mbed OS
  */
- 
-#define YOTTA_CFG_MBED_TRACE
-#include "mbed-trace/mbed_trace.h"
-#define TRACE_GROUP  "SSD1306"
 
-#include "mbed-drivers/mbed.h"
+
+#include "mbed.h"
 #include "adafruit-ssd1306/Adafruit_SSD1306.h"
 
 #define SSD1306_SETCONTRAST 0x81

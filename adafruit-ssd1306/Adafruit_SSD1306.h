@@ -24,10 +24,7 @@ All text above, and the splash screen must be included in any redistribution
 #ifndef _ADAFRUIT_SSD1306_H_
 #define _ADAFRUIT_SSD1306_H_
 
-#include "mbed-drivers/mbed.h"
-#include "minar/minar.h"
-#include "core-util/Event.h"
-#include "core-util/FunctionPointer.h"
+#include "mbed.h"
 
 #include "Adafruit_GFX.h"
 
@@ -39,8 +36,6 @@ All text above, and the splash screen must be included in any redistribution
 #define BLACK 0
 #define WHITE 1
 #define _BV(bit) (1 << (bit))
-
-using namespace mbed::util;
 
 // A DigitalOut sub-class that provides a constructed default state
 class DigitalOut2 : public DigitalOut
